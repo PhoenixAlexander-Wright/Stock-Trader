@@ -1,7 +1,7 @@
 # Stock Trader
 This is a basic application utilizing [Next.js](https://nextjs.org), [WebSockets](https://developer.mozilla.org/en-US/docs/Web/API/WebSockets_API) (via [Socket.IO](https://socket.io)), and the [MarketData.app API](https://www.marketdata.app/docs/) to gamble with fake money using a stock’s past year of daily price movement. Simply enter a stock’s ticker symbol and start buying and selling to make (or lose) money.
 
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+![screenshot](https://github.com/user-attachments/assets/e80618b9-ab9a-4ff8-abcd-c70f8d3ab6e7)
 
 ## Getting Started
 1. Optionally acquire a marketdata.app API token. If you don’t, it will use sample data.
@@ -20,4 +20,5 @@ This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-
 1. Implementing a better chart that displays full candlesticks instead of just closing prices
 1. Add statistics like your best and worst trade
 1. A pretter and more robust UI
+
 

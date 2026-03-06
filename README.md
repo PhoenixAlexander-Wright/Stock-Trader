@@ -14,11 +14,12 @@ This is a basic application utilizing [Next.js](https://nextjs.org), [WebSockets
 1. Session state is stored as an in‑memory object with no persistence, so progress is lost when the server shuts down. Adding a database or similar storage would resolve this.
 
 ## Furture Improvements
-1.  Showing your current profit and loss before selling
+1. Allow for changing the stock instead of having to refresh
+1. Showing your current profit and loss before selling
 1. Displaying a list of all your previous trades
 1. Adding speed controls for slowing down or speeding up the chart
 1. Implementing a better chart that displays full candlesticks instead of just closing prices
 1. Add statistics like your best and worst trade
-1. A pretter and more robust UI
+1. A pretter and more robust UI (Buttons reflect their state better, improved layout, etc.)
 
 

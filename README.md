@@ -1,36 +1,23 @@
+# Stock Trader
+This is a basic application utilizing [Next.js](https://nextjs.org), [WebSockets](https://developer.mozilla.org/en-US/docs/Web/API/WebSockets_API) (via [Socket.IO](https://socket.io)), and the [MarketData.app API](https://www.marketdata.app/docs/) to gamble with fake money using a stock’s past year of daily price movement. Simply enter a stock’s ticker symbol and start buying and selling to make (or lose) money.
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
+1. Optionally acquire a marketdata.app API token. If you don’t, it will use sample data.
+1. Install dependencies via `pnpm i`
+1. run the dev server with API token passed placed in .env file or in the run command like so: `MARKET_DATA_TOKEN=TOKEN_GOES_HERE pnpm dev`
+1. Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-First, run the development server:
+## Known Limitations
+1. The server keeps track of progress via the socket ID, so disconnections lose state. An easy fix would be to create an ID and store it on the client so it can resync.
+1. Session state is stored as an in‑memory object with no persistence, so progress is lost when the server shuts down. Adding a database or similar storage would resolve this.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Furture Improvements
+1.  Showing your current profit and loss before selling
+1. Displaying a list of all your previous trades
+1. Adding speed controls for slowing down or speeding up the chart
+1. Implementing a better chart that displays full candlesticks instead of just closing prices
+1. Add statistics like your best and worst trade
+1. A pretter and more robust UI
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
